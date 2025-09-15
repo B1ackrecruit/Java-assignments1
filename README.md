@@ -17,14 +17,14 @@ This repository contains multiple Java assignments (Praktikum) for learning and 
 - `Praktikum_05_Collections/`
 
 Each Praktikum folder contains:
-- `solutions/`: Your solutions to the exercises.
+- `solutions/`: Solutions to the exercises.
 - `SupportMaterial/`: Reference materials and resources.
 - `README.md`: Assignment instructions and details.
 
 ## How to Use
 1. Navigate to the Praktikum folder you want to work on.
 2. Read the assignment-specific `README.md` for instructions.
-3. Add your solutions to the `solutions/` folder.
+3. Add solutions to the `solutions/` folder.
 4. Use materials in `SupportMaterial/` as needed.
 
 ## Contributing
