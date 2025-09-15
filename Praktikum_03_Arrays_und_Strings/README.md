@@ -1,6 +1,22 @@
 # Praktikum 03: Arrays und Strings
 
-This assignment covers arrays and string manipulation in Java. Complete the exercises in the `solutions/` folder and refer to materials in `SupportMaterial/`.
+## Achievements and Tasks
+
+**Lernziele:**
+- Arrays: Erstellung, Zugriff und Literale
+- Strings: arbeiten mit Strings und StringBuilder
+
+**Aufgaben:**
+1. **ChatCheapyT-Chatbot:**
+	- Implementierung eines einfachen Chatbots mit verschiedenen Ausgaberegeln basierend auf String-Methoden.
+	- Erweiterung um eigene kreative Ausgaberegel.
+	- Umgang mit Benutzereingaben und robustes Fehlerhandling.
+2. **Schiffe bergen (Spiel):**
+	- Implementierung eines Einspieler-Spiels ähnlich „Schiffe versenken“.
+	- Definition und Verwendung eines enums für Feldzustände.
+	- Arbeiten mit zweidimensionalen Arrays zur Darstellung des Spielfelds.
+	- Methoden zur Ausgabe, Überprüfung und Interaktion mit dem Spielfeld.
+	- Optional: Zufälliges Erzeugen von Karten.
 
 ## Instructions
 - Read all tasks carefully.
