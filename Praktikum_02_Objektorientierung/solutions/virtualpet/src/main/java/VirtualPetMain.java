@@ -3,7 +3,7 @@
  * Main class containing the main-method which executes some interactions
  * between Owner and Pet
  */
-public class VirtualPetMain{
+public class VirtualPetMain {
 
   public static void main(String[] args) {
 
@@ -25,7 +25,7 @@ public class VirtualPetMain{
     System.out.printf("roscoClone == rosco: %b%n", roscoClone == rosco);
 
     // Owners
-    PetOwner jimmy = new PetOwner("Jimmy", rosco, rabbit); 
+    PetOwner jimmy = new PetOwner("Jimmy", rosco, rabbit);
     PetOwner timmy = new PetOwner("Timmy", morgana);
 
     // Output
@@ -37,11 +37,13 @@ public class VirtualPetMain{
 
     System.out.printf("jimmyClone.equals(jimmy) = %b%n", jimmyClone.equals(jimmy));
     System.out.printf("jimmyClone == jimmy = %b%n", jimmyClone == jimmy);
-    System.out.printf("jimmyClone.getFirstPet().equals(jimmy.getFirstPet()) = %b%n", jimmyClone.getFirstPet().equals(jimmy.getFirstPet()));
-    System.out.printf("jimmyClone.getFirstPet() == jimmy.getFirstPet() = %b%n", jimmyClone.getFirstPet() == jimmy.getFirstPet());
+    System.out.printf("jimmyClone.getFirstPet().equals(jimmy.getFirstPet()) = %b%n",
+        jimmyClone.getFirstPet().equals(jimmy.getFirstPet()));
+    System.out.printf("jimmyClone.getFirstPet() == jimmy.getFirstPet() = %b%n",
+        jimmyClone.getFirstPet() == jimmy.getFirstPet());
 
-    // 
-    for (int i = 0; i < 10; i++){
+    //
+    for (int i = 0; i < 10; i++) {
       jimmy.takeCareOfPets();
       timmy.takeCareOfPets();
 
@@ -50,11 +52,7 @@ public class VirtualPetMain{
       System.out.println(timmy);
       System.out.println();
     }
-    
 
   }
 
-
 }
-
-

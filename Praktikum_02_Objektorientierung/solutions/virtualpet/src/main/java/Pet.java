@@ -3,7 +3,7 @@
  * A pet with a name a type ({@see PetType}) and three state values
  * (happiness, hungriness, sleepiness).
  */
-public class Pet{
+public class Pet {
 
   private final String name;
   private final PetType type;
@@ -19,7 +19,7 @@ public class Pet{
    * @param name Name of pet (must not be null or empty)
    * @param type Type of pet (must not be null)
    */
-  public Pet(String name, PetType type){
+  public Pet(String name, PetType type) {
     if (name == null || name.isEmpty())
       throw new IllegalArgumentException("Name must not be null or empty");
 
@@ -40,7 +40,7 @@ public class Pet{
    *
    * @param other Other pet to copy
    */
-  public Pet(Pet other){
+  public Pet(Pet other) {
 
     if (other == null)
       throw new IllegalArgumentException("other pet must not be null");
@@ -53,24 +53,23 @@ public class Pet{
 
   }
 
-  public String getName(){
+  public String getName() {
     return name;
   }
 
-  public PetType getType(){
+  public PetType getType() {
     return type;
   }
 
-  public int getHappiness(){
+  public int getHappiness() {
     return happiness;
   }
-
 
   /**
    * Returns {@code true} if happiness less than or equal to 2; {@code false}
    * otherwise.
    */
-  public boolean isSad(){
+  public boolean isSad() {
     return happiness <= 2;
   }
 
@@ -78,15 +77,15 @@ public class Pet{
    * Returns {@code true} if happiness greater than or equal to 8; {@code false}
    * otherwise.
    */
-  public boolean isHappy(){
+  public boolean isHappy() {
     return happiness >= 8;
   }
 
   /**
    * Returns how sad the pet is, where sadness is defined as 10-happiness.
    */
-  public int getSadness(){
-    return 10-happiness;
+  public int getSadness() {
+    return 10 - happiness;
   }
 
   /**
@@ -97,12 +96,12 @@ public class Pet{
    * @param change value by which to change the happiness value.
    * @return new happiness value
    */
-  public int changeHappiness(int change){
-    this.happiness = clamp(0,10,happiness+change);
+  public int changeHappiness(int change) {
+    this.happiness = clamp(0, 10, happiness + change);
     return this.happiness;
   }
 
-  public int getSleepiness(){
+  public int getSleepiness() {
     return sleepiness;
   }
 
@@ -114,12 +113,12 @@ public class Pet{
    * @param change value by which to change the sleepiness value.
    * @return new sleepiness value
    */
-  public int changeSleepiness(int change){
-    this.sleepiness = clamp(0,10,sleepiness+change);
+  public int changeSleepiness(int change) {
+    this.sleepiness = clamp(0, 10, sleepiness + change);
     return this.sleepiness;
   }
 
-  public int getHungriness(){
+  public int getHungriness() {
     return hungriness;
   }
 
@@ -131,12 +130,12 @@ public class Pet{
    * @param change value by which to change the hungriness value.
    * @return new hungriness value
    */
-  public int changeHungriness(int change){
-    this.hungriness = clamp(0,10,hungriness+change);
+  public int changeHungriness(int change) {
+    this.hungriness = clamp(0, 10, hungriness + change);
     return this.hungriness;
   }
 
-  private void change(int happinessChange, int hungrinessChange, int sleepinessChange){
+  private void change(int happinessChange, int hungrinessChange, int sleepinessChange) {
     happinessChange = (int) Math.round(happinessChange * this.type.getHappinessMultiplier());
     sleepinessChange = (int) Math.round(sleepinessChange * this.type.getSleepinessMultiplier());
     hungrinessChange = (int) Math.round(hungrinessChange * this.type.getHungrinessMultiplier());
@@ -153,8 +152,8 @@ public class Pet{
    * These values pre-multiplied with the characteristic pet type multipliers
    * {@see PetType}.
    */
-  public void play(){
-    change(2,2,2);
+  public void play() {
+    change(2, 2, 2);
   }
 
   /**
@@ -164,8 +163,8 @@ public class Pet{
    * These values pre-multiplied with the characteristic pet type multipliers.
    * {@see PetType}.
    */
-  public void eat(){
-    change(1,-2,1);
+  public void eat() {
+    change(1, -2, 1);
   }
 
   /**
@@ -175,15 +174,15 @@ public class Pet{
    * These values pre-multiplied with the characteristic pet type multipliers.
    * {@see PetType}.
    */
-  public void sleep(){
-    change(-2,2,-2);
+  public void sleep() {
+    change(-2, 2, -2);
   }
-
 
   /**
    * Returns true if all attributes of the pets are equal.
    */
-  @Override public boolean equals(Object other){
+  @Override
+  public boolean equals(Object other) {
     if (other == null)
       return false;
 
@@ -216,7 +215,8 @@ public class Pet{
   /**
    * {@inheritDoc}
    */
-  @Override public String toString(){
+  @Override
+  public String toString() {
 
     String mood = ":-|";
 
@@ -226,15 +226,13 @@ public class Pet{
     if (isSad())
       mood = ":-(";
 
-
     return String.format("%s %s (%s): Ha: %d, Hu: %d, Sl: %d",
         name, mood, type, happiness, hungriness, sleepiness);
 
   }
-  
-  private int clamp(int min, int max, int value){
+
+  private int clamp(int min, int max, int value) {
     return Math.max(min, Math.min(max, value));
   }
-
 
 }
